@@ -1,5 +1,5 @@
 # A makefile for Docker builds
-REGISTRY = lifelog
+REGISTRY = andersjanmyr
 NAME = nginx-confd
 # VERSION will be sent as a parameter: `make publish VERSION=1.1.1`
 VERSION = development
