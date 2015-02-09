@@ -20,3 +20,13 @@ the `FROM` tag and an `EXPOSE` tag to expose the nginx port.
 FROM andersjanmyr/nginx-conf
 EXPOSE 80
 ```
+
+`confd-watch.sh`, the script that is listening to `etcd` is configured with the
+following environment variables and con be overridden when starting the
+container with `docker run -e "HOST_IP=$MY_IP" -it lifelog/nginx-confd`
+
+```
+export ETCD_PORT=${ETCD_PORT:-4001}
+export HOST_IP=${HOST_IP:-172.17.42.1}
+export ETCD=$HOST_IP:4001
+```
