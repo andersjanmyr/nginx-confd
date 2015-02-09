@@ -8,7 +8,8 @@ RUN rm -f /etc/nginx/sites-enabled/default
 RUN curl -L https://github.com/kelseyhightower/confd/releases/download/v0.6.3/confd-0.6.3-linux-amd64 -o /usr/local/bin/confd
 RUN chmod +x /usr/local/bin/confd
 
-RUN mkdir -p /etc/confd/{conf.d,templates}
+RUN mkdir -p /etc/confd/conf.d
+RUN mkdir -p /etc/confd/templates
 COPY ./confd-watch.sh /usr/local/bin/confd-watch.sh
 RUN chmod +x /usr/local/bin/confd-watch.sh
 
