@@ -12,7 +12,7 @@ default:
 
 # Builds and tags the image
 build:
-	docker build --rm -t $(IMAGE_WITH_VERSION) .
+	docker build --rm=true -t $(IMAGE_WITH_VERSION) .
 
 # Pushes the image to the docker-registry
 publish: build
