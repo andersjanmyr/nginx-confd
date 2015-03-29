@@ -23,8 +23,8 @@ EXPOSE 80
 
 `confd-watch.sh`, the script that is listening to `etcd` is configured with the
 following environment variables and con be overridden when starting the
-container with `docker run -e "ETCD_NODE=$MY_IP:4001" -it lifelog/nginx-confd`
+container with `docker run -e "CONFD_NODE=$MY_IP:4001" -it lifelog/nginx-confd`
 
 ```
-export ETCD_NODE=172.17.42.1:4001
+export CONFD_NODE=172.17.42.1:4001
 ```
