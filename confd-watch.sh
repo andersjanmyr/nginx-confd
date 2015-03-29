@@ -18,8 +18,8 @@ confd -interval 10 -node $node -config-file /etc/confd/conf.d/nginx.toml &
 echo "[nginx] confd is listening for changes on etcd..."
 
 # Start nginx
-echo "[nginx] starting nginx service..."
-service nginx start
+echo "[nginx] starting nginx..."
+nginx
 
 # Tail all nginx log files
 tail -f /var/log/nginx/*.log
