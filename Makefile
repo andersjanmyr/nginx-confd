@@ -23,7 +23,7 @@ image:
 	@echo $(IMAGE_WITH_VERSION)
 
 run:
-	docker run -p 80 $(IMAGE_WITH_VERSION)
+	docker run -it --rm -p 80 $(IMAGE_WITH_VERSION)
 
 bash:
-	docker run -it $(IMAGE_WITH_VERSION) bash
+	docker run -it --rm -p 80 $(IMAGE_WITH_VERSION) bash
